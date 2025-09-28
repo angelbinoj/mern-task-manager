@@ -1,14 +1,14 @@
-MERN Task Manager
+MERN TASK MANAGER!
 
 A full-stack Personal Task Manager application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to register, log in securely, and manage daily tasks with full CRUD operations.
 
-Live Deployment
+Live Deployment:
 
 Frontend (Vercel): https://mern-task-manager-frontend-pearl.vercel.app
 
 Backend (Express API): https://mern-task-manager-backend-phi.vercel.app
 
-Features
+Features:
 
 User authentication (Register/Login with JWT)
 
@@ -20,7 +20,7 @@ Responsive UI built with React
 
 Persistent data storage with MongoDB
 
-Tech Stack
+Tech Stack:
 
 Frontend: React.js, Axios, React Router
 
