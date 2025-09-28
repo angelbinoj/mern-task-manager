@@ -12,7 +12,7 @@ function Tasks() {
   // Fetch Task list
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/tasks", {
+      const res = await axios.get("https://mern-task-manager-backend-phi.vercel.app/api/tasks", {
         headers: { Authorization: `Bearer ${token}` },
         withCredentials: true,
       });
@@ -44,7 +44,7 @@ function Tasks() {
       if (editingId) {
         // Update existing task
         const res = await axios.put(
-          `http://localhost:3000/api/tasks/${editingId}`,
+          `https://mern-task-manager-backend-phi.vercel.app/api/tasks/${editingId}`,
           payload,
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -53,7 +53,7 @@ function Tasks() {
       } else {
         // Add new task
         const res = await axios.post(
-          "http://localhost:3000/api/tasks",
+          "https://mern-task-manager-backend-phi.vercel.app/api/tasks",
           formData,
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -70,7 +70,7 @@ function Tasks() {
   // Delete Task
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/tasks/${id}`, {
+      await axios.delete(`https://mern-task-manager-backend-phi.vercel.app/api/tasks/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTasks(tasks.filter((t) => t._id !== id));

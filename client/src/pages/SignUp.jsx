@@ -18,7 +18,7 @@ function SignUpPage() {
         e.preventDefault()
 
         try {
-            const { data } = await axios.post('http://localhost:3000/api/auth/register', userData,{withCredentials:true})
+            const { data } = await axios.post('https://mern-task-manager-backend-phi.vercel.app/api/auth/register', userData,{withCredentials:true})
             
             if (data?.success) {
                 localStorage.setItem('user', JSON.stringify(data.user));

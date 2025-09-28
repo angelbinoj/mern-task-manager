@@ -18,7 +18,7 @@ function LoginPage() {
         e.preventDefault()
 
         try {
-            const { data } = await axios.post('http://localhost:3000/api/auth/login', userData, { withCredentials: true })
+            const { data } = await axios.post('https://mern-task-manager-backend-phi.vercel.app/api/auth/login', userData, { withCredentials: true })
             if (data?.success) {
                 localStorage.setItem('token', (data.data.token));
                 setAlertMessage(data.data.message);

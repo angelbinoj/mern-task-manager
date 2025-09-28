@@ -13,7 +13,7 @@ connectDB()
 const app=express();
 app.use((express.json()));
 app.use(cookieParser());
-const allowOrigins = ['http://localhost:5173']
+const allowOrigins = ['http://localhost:5173','https://mern-task-manager-frontend-pearl.vercel.app']
 
 app.use(cors({
     origin: function (origin, callback) {
@@ -31,7 +31,7 @@ app.use(cors({
 app.use('/api/auth',authRouter);
 app.use('/api/tasks',taskRouter);
 
-app.use('/api',(req,res)=>{
+app.use('/',(req,res)=>{
     res.send("<h1>Welcome to User API</h1>");
 })
 
